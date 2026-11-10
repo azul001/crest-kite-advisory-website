@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cinzel:wght@400;600&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-burgundy: #4A1525;
+  --color-deep-wine: #5C1D2E;
+  --color-secondary-burgundy: #722F37;
+  --color-ivory: #FAF7F2;
+  --color-cream: #F4EFEA;
+  --color-white: #FFFFFF;
+  --color-muted-gold: #C5A880;
+  --color-dark-gold: #9E7D47;
+  --color-dark-slate: #1A1A1A;
+  --color-muted-grey: #77716D;
+}
+
+@theme inline {
+  --color-burgundy: var(--color-burgundy);
+  --color-deep-wine: var(--color-deep-wine);
+  --color-ivory: var(--color-ivory);
+  --color-cream: var(--color-cream);
+  --color-muted-gold: var(--color-muted-gold);
+  --color-dark-gold: var(--color-dark-gold);
+  --color-dark-slate: var(--color-dark-slate);
+  --color-muted-grey: var(--color-muted-grey);
+
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-cinzel: 'Cinzel', serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-dark-slate);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
