@@ -166,61 +166,106 @@ export default function Hero() {
         >
           <div
             className="relative w-full overflow-hidden"
-            style={{ height: 480, borderRadius: 2 }}
+            style={{ height: 480, borderRadius: 2, border: "1px solid rgba(197,168,128,0.2)" }}
           >
-            {/* Burgundy gradient background */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(160deg, #2a0a14 0%, #4A1525 35%, #722F37 65%, #C5A880 100%)",
-              }}
-            />
-            {/* Subtle geometric pattern overlay */}
-            <div
-              className="absolute inset-0 opacity-10"
-              style={{
-                backgroundImage: "repeating-linear-gradient(45deg, rgba(197,168,128,0.5) 0px, rgba(197,168,128,0.5) 1px, transparent 1px, transparent 50px)",
-              }}
-            />
-            {/* Silhouette cityscape */}
-            <svg
-              className="absolute bottom-0 left-0 w-full"
-              viewBox="0 0 400 200"
-              preserveAspectRatio="none"
-              style={{ height: 200 }}
-            >
-              <rect x="20" y="80" width="30" height="120" fill="rgba(42,10,20,0.85)" />
-              <rect x="55" y="60" width="20" height="140" fill="rgba(42,10,20,0.9)" />
-              <rect x="80" y="40" width="25" height="160" fill="rgba(42,10,20,0.85)" />
-              <rect x="110" y="30" width="15" height="170" fill="rgba(42,10,20,0.8)" />
-              <rect x="130" y="20" width="40" height="180" fill="rgba(42,10,20,0.9)" />
-              <rect x="175" y="10" width="20" height="190" fill="rgba(42,10,20,0.85)" />
-              <rect x="200" y="35" width="30" height="165" fill="rgba(42,10,20,0.8)" />
-              <rect x="235" y="50" width="25" height="150" fill="rgba(42,10,20,0.85)" />
-              <rect x="265" y="65" width="20" height="135" fill="rgba(42,10,20,0.75)" />
-              <rect x="290" y="45" width="35" height="155" fill="rgba(42,10,20,0.85)" />
-              <rect x="330" y="75" width="25" height="125" fill="rgba(42,10,20,0.8)" />
-              <rect x="360" y="85" width="30" height="115" fill="rgba(42,10,20,0.75)" />
-              {/* Gold water reflection */}
-              <rect x="0" y="200" width="400" height="40" fill="rgba(197,168,128,0.15)" />
+            {/* Sky gradient */}
+            <div className="absolute inset-0" style={{
+              background: "linear-gradient(180deg, #0d0408 0%, #1a0810 30%, #2d1018 55%, #4A1525 75%, #722F37 100%)",
+            }} />
+
+            {/* Stars */}
+            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 480">
+              {[
+                [30,20],[80,45],[140,15],[200,35],[260,20],[320,40],[370,15],
+                [55,70],[110,55],[175,80],[240,60],[300,75],[350,50],
+                [20,100],[90,110],[160,95],[230,105],[310,90],[380,115],
+              ].map(([cx,cy],i) => (
+                <circle key={i} cx={cx} cy={cy} r={i%3===0?1.2:0.7}
+                  fill={i%4===0?"#C5A880":"rgba(250,247,242,0.6)"} />
+              ))}
             </svg>
 
-            {/* Overlay panel */}
-            <div
-              className="absolute bottom-0 left-0 right-0 p-5"
-              style={{ backgroundColor: "var(--color-burgundy)" + "f0" }}
-            >
-              <p
-                className="text-xs tracking-widest font-cinzel mb-1"
-                style={{ color: "var(--color-muted-gold)" }}
-              >
-                UAE CORPORATE TAX & REGULATORY ALIGNED
-              </p>
-              <p
-                className="text-xs leading-relaxed"
-                style={{ color: "var(--color-muted-gold)" }}
-              >
+            {/* Dubai skyline — detailed gold-lit buildings */}
+            <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 400 260" preserveAspectRatio="none" style={{ height: 260 }}>
+              <defs>
+                <linearGradient id="bldg1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#C5A880" stopOpacity="0.9"/>
+                  <stop offset="100%" stopColor="#4A1525" stopOpacity="1"/>
+                </linearGradient>
+                <linearGradient id="bldg2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#9E7D47" stopOpacity="0.8"/>
+                  <stop offset="100%" stopColor="#2d1018" stopOpacity="1"/>
+                </linearGradient>
+                <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="rgba(197,168,128,0.25)"/>
+                  <stop offset="100%" stopColor="rgba(74,21,37,0.1)"/>
+                </linearGradient>
+              </defs>
+              {/* Back layer — shorter buildings */}
+              <rect x="0"   y="160" width="22" height="100" fill="url(#bldg2)" opacity="0.5"/>
+              <rect x="25"  y="140" width="16" height="120" fill="url(#bldg2)" opacity="0.5"/>
+              <rect x="345" y="150" width="20" height="110" fill="url(#bldg2)" opacity="0.5"/>
+              <rect x="370" y="135" width="30" height="125" fill="url(#bldg2)" opacity="0.5"/>
+              {/* Mid layer */}
+              <rect x="45"  y="120" width="28" height="140" fill="url(#bldg1)" opacity="0.7"/>
+              <rect x="78"  y="90"  width="22" height="170" fill="url(#bldg1)" opacity="0.75"/>
+              <rect x="105" y="130" width="18" height="130" fill="url(#bldg1)" opacity="0.6"/>
+              <rect x="290" y="100" width="24" height="160" fill="url(#bldg1)" opacity="0.7"/>
+              <rect x="318" y="120" width="22" height="140" fill="url(#bldg1)" opacity="0.65"/>
+              {/* Main towers */}
+              <rect x="128" y="60"  width="36" height="200" fill="url(#bldg1)"/>
+              {/* Burj Khalifa-style spire */}
+              <polygon points="168,0 174,60 162,60" fill="#C5A880" opacity="0.9"/>
+              <rect x="162" y="60"  width="12" height="200" fill="url(#bldg1)"/>
+              <rect x="200" y="80"  width="30" height="180" fill="url(#bldg1)" opacity="0.9"/>
+              <rect x="234" y="95"  width="26" height="165" fill="url(#bldg1)" opacity="0.85"/>
+              <rect x="264" y="70"  width="22" height="190" fill="url(#bldg1)"/>
+              {/* Window lights */}
+              {[[132,80],[136,80],[140,80],[132,95],[136,95],[140,95],
+                [165,70],[165,85],[165,100],[165,115],
+                [204,100],[208,100],[204,115],[208,115],
+                [267,85],[271,85],[267,100],[271,100]].map(([wx,wy],i) => (
+                <rect key={i} x={wx} y={wy} width="3" height="2"
+                  fill="#C5A880" opacity={0.4+Math.random()*0.4}/>
+              ))}
+              {/* Water reflection */}
+              <rect x="0" y="250" width="400" height="10" fill="url(#water)"/>
+            </svg>
+
+            {/* Floating credential badges */}
+            <div className="absolute top-5 right-5 flex flex-col gap-2">
+              {[
+                { label: "FTA Registered", icon: "✓" },
+                { label: "IFRS Compliant", icon: "✓" },
+                { label: "VAT Registered", icon: "✓" },
+              ].map((badge) => (
+                <div key={badge.label}
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-sm text-xs font-cinzel tracking-wide"
+                  style={{
+                    backgroundColor: "rgba(197,168,128,0.12)",
+                    border: "1px solid rgba(197,168,128,0.35)",
+                    color: "var(--color-muted-gold)",
+                    backdropFilter: "blur(4px)",
+                  }}>
+                  <span style={{ color: "#6ee7b7" }}>{badge.icon}</span>
+                  {badge.label}
+                </div>
+              ))}
+            </div>
+
+            {/* Bottom panel */}
+            <div className="absolute bottom-0 left-0 right-0 p-5"
+              style={{
+                background: "linear-gradient(0deg, rgba(10,2,6,0.95) 0%, rgba(42,10,20,0.85) 60%, transparent 100%)",
+              }}>
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-4 h-px" style={{ backgroundColor: "var(--color-muted-gold)" }}/>
+                <p className="text-xs tracking-[0.25em] font-cinzel"
+                  style={{ color: "var(--color-muted-gold)" }}>
+                  UAE CORPORATE TAX &amp; REGULATORY ALIGNED
+                </p>
+              </div>
+              <p className="text-xs leading-relaxed" style={{ color: "rgba(250,247,242,0.65)" }}>
                 Committed to compliance excellence and international financial reporting standards.
               </p>
             </div>
