@@ -34,7 +34,7 @@ function MetricCounter({
     <div className="text-center md:text-left">
       <div
         className="text-3xl font-bold font-playfair leading-none"
-        style={{ color: "var(--color-burgundy)" }}
+        style={{ color: "var(--color-muted-gold)" }}
       >
         {metric.prefix}
         {display}
@@ -42,7 +42,7 @@ function MetricCounter({
       </div>
       <div
         className="text-xs mt-1 tracking-wide"
-        style={{ color: "var(--color-muted-grey)" }}
+        style={{ color: "rgba(250,247,242,0.6)" }}
       >
         {metric.label}
       </div>
@@ -73,7 +73,7 @@ export default function Hero() {
       id="home"
       ref={ref}
       className="w-full py-20 md:py-28"
-      style={{ backgroundColor: "var(--color-ivory)" }}
+      style={{ backgroundColor: "var(--color-burgundy)" }}
     >
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-14">
         {/* Left */}
@@ -92,15 +92,15 @@ export default function Hero() {
 
           <h1
             className="font-playfair text-4xl md:text-5xl xl:text-6xl leading-tight font-bold mb-6"
-            style={{ color: "var(--color-dark-slate)" }}
+            style={{ color: "var(--color-ivory)" }}
           >
             Where Financial Expertise Meets Business{" "}
-            <span style={{ color: "var(--color-burgundy)" }}>Confidence.</span>
+            <span style={{ color: "var(--color-muted-gold)" }}>Confidence.</span>
           </h1>
 
           <p
             className="text-base md:text-lg leading-relaxed mb-10 max-w-xl"
-            style={{ color: "var(--color-muted-grey)" }}
+            style={{ color: "rgba(250,247,242,0.75)" }}
           >
             Pioneering audit governance, precision tax structuring, and compliance
             excellence for multinational groups, conglomerates, and high-growth
@@ -114,14 +114,14 @@ export default function Hero() {
               }}
               className="px-7 py-3 text-sm font-medium tracking-widest font-cinzel transition-colors"
               style={{
-                backgroundColor: "var(--color-burgundy)",
-                color: "var(--color-ivory)",
+                backgroundColor: "var(--color-muted-gold)",
+                color: "var(--color-dark-slate)",
               }}
               onMouseEnter={(e) =>
-                (e.currentTarget.style.backgroundColor = "var(--color-secondary-burgundy)")
+                (e.currentTarget.style.backgroundColor = "var(--color-dark-gold)")
               }
               onMouseLeave={(e) =>
-                (e.currentTarget.style.backgroundColor = "var(--color-burgundy)")
+                (e.currentTarget.style.backgroundColor = "var(--color-muted-gold)")
               }
             >
               EXPLORE OUR SERVICES →
@@ -132,16 +132,14 @@ export default function Hero() {
               }}
               className="px-7 py-3 text-sm font-medium tracking-widest font-cinzel border transition-colors"
               style={{
-                borderColor: "var(--color-burgundy)",
-                color: "var(--color-burgundy)",
+                borderColor: "rgba(197,168,128,0.6)",
+                color: "var(--color-ivory)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "var(--color-burgundy)";
-                e.currentTarget.style.color = "var(--color-ivory)";
+                e.currentTarget.style.backgroundColor = "rgba(197,168,128,0.15)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = "transparent";
-                e.currentTarget.style.color = "var(--color-burgundy)";
               }}
             >
               CONTACT OUR PARTNERS
