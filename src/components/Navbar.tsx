@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { NAV_LINKS, COMPANY } from "@/lib/data";
 
-function KiteLogo() {
+function KiteLogo({ dark }: { dark: boolean }) {
   return (
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
       <polygon
         points="18,2 32,18 18,30 4,18"
-        fill="var(--color-burgundy)"
+        fill={dark ? "rgba(197,168,128,0.15)" : "var(--color-burgundy)"}
         stroke="var(--color-muted-gold)"
         strokeWidth="1"
       />
@@ -46,10 +46,10 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="sticky top-0 z-50 w-full transition-shadow duration-300"
+        className="sticky top-0 z-50 w-full transition-all duration-400"
         style={{
-          backgroundColor: "var(--color-ivory)",
-          borderBottom: `1px solid var(--color-muted-gold)`,
+          backgroundColor: scrolled ? "var(--color-ivory)" : "var(--color-burgundy)",
+          borderBottom: scrolled ? "1px solid rgba(197,168,128,0.4)" : "1px solid rgba(197,168,128,0.15)",
           boxShadow: scrolled ? "0 2px 20px rgba(74,21,37,0.08)" : "none",
         }}
       >
@@ -59,17 +59,17 @@ export default function Navbar() {
             onClick={() => handleNav("#home")}
             className="flex items-center gap-3 shrink-0"
           >
-            <KiteLogo />
+            <KiteLogo dark={!scrolled} />
             <div className="text-left">
               <div
                 className="text-sm font-bold tracking-widest font-cinzel leading-none"
-                style={{ color: "var(--color-burgundy)" }}
+                style={{ color: scrolled ? "var(--color-burgundy)" : "var(--color-muted-gold)" }}
               >
                 CREST KITE
               </div>
               <div
                 className="text-[9px] tracking-wider font-cinzel leading-none mt-0.5"
-                style={{ color: "var(--color-muted-grey)" }}
+                style={{ color: scrolled ? "var(--color-muted-grey)" : "rgba(250,247,242,0.5)" }}
               >
                 ADVISORY & ASSURANCE LLC
               </div>
@@ -83,7 +83,10 @@ export default function Navbar() {
                 key={link.label}
                 onClick={() => handleNav(link.href)}
                 className="text-xs tracking-wide font-medium transition-colors hover:opacity-70 whitespace-nowrap"
-                style={{ color: "var(--color-dark-slate)", fontFamily: "var(--font-inter)" }}
+                style={{
+                  color: scrolled ? "var(--color-dark-slate)" : "rgba(250,247,242,0.85)",
+                  fontFamily: "var(--font-inter)",
+                }}
               >
                 {link.label}
               </button>
@@ -95,14 +98,17 @@ export default function Navbar() {
             <a
               href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}
               className="flex items-center gap-1.5 text-xs"
-              style={{ color: "var(--color-muted-grey)" }}
+              style={{ color: scrolled ? "var(--color-muted-grey)" : "rgba(250,247,242,0.65)" }}
             >
               <Phone size={12} />
               {COMPANY.phone}
             </a>
             <span
               className="text-xs font-medium border px-2 py-1 rounded-sm cursor-pointer"
-              style={{ borderColor: "var(--color-muted-gold)", color: "var(--color-muted-grey)" }}
+              style={{
+                borderColor: "var(--color-muted-gold)",
+                color: scrolled ? "var(--color-muted-grey)" : "rgba(250,247,242,0.75)",
+              }}
             >
               EN
             </span>
@@ -110,15 +116,19 @@ export default function Navbar() {
               onClick={() => handleNav("#contact")}
               className="text-xs font-medium tracking-widest px-4 py-2 rounded-sm font-cinzel transition-colors"
               style={{
-                backgroundColor: "var(--color-burgundy)",
-                color: "var(--color-ivory)",
+                backgroundColor: scrolled ? "var(--color-burgundy)" : "var(--color-muted-gold)",
+                color: scrolled ? "var(--color-ivory)" : "var(--color-dark-slate)",
               }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.backgroundColor = "var(--color-secondary-burgundy)")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.backgroundColor = "var(--color-burgundy)")
-              }
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = scrolled
+                  ? "var(--color-secondary-burgundy)"
+                  : "var(--color-dark-gold)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = scrolled
+                  ? "var(--color-burgundy)"
+                  : "var(--color-muted-gold)";
+              }}
             >
               BOOK CONSULTATION
             </button>
@@ -129,7 +139,7 @@ export default function Navbar() {
             className="lg:hidden p-2"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
-            style={{ color: "var(--color-burgundy)" }}
+            style={{ color: scrolled ? "var(--color-burgundy)" : "var(--color-ivory)" }}
           >
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>

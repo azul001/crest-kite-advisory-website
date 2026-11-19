@@ -69,6 +69,11 @@ export default function ContactForm() {
         background: "linear-gradient(145deg, #0d0408 0%, #1a0810 30%, #2a0a14 60%, #4A1525 100%)",
       }}
     >
+      <style>{`
+        #contact input::placeholder,
+        #contact textarea::placeholder { color: rgba(250,247,242,0.3); }
+        #contact select option { background-color: #1a0810; color: rgba(250,247,242,0.9); }
+      `}</style>
       {/* Pattern overlay */}
       <div className="absolute inset-0 opacity-[0.07] pointer-events-none"
         style={{
