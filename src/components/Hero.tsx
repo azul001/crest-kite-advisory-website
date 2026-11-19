@@ -170,12 +170,19 @@ export default function Hero() {
             className="relative w-full overflow-hidden"
             style={{ height: 480, borderRadius: 2 }}
           >
-            {/* Gradient placeholder simulating Dubai skyline */}
+            {/* Burgundy gradient background */}
             <div
               className="absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(160deg, #1a2744 0%, #2d4a7a 25%, #4a6fa5 45%, #c5a880 70%, #9e7d47 100%)",
+                  "linear-gradient(160deg, #2a0a14 0%, #4A1525 35%, #722F37 65%, #C5A880 100%)",
+              }}
+            />
+            {/* Subtle geometric pattern overlay */}
+            <div
+              className="absolute inset-0 opacity-10"
+              style={{
+                backgroundImage: "repeating-linear-gradient(45deg, rgba(197,168,128,0.5) 0px, rgba(197,168,128,0.5) 1px, transparent 1px, transparent 50px)",
               }}
             />
             {/* Silhouette cityscape */}
@@ -185,20 +192,20 @@ export default function Hero() {
               preserveAspectRatio="none"
               style={{ height: 200 }}
             >
-              <rect x="20" y="80" width="30" height="120" fill="rgba(26,39,68,0.9)" />
-              <rect x="55" y="60" width="20" height="140" fill="rgba(26,39,68,0.95)" />
-              <rect x="80" y="40" width="25" height="160" fill="rgba(26,39,68,0.9)" />
-              <rect x="110" y="30" width="15" height="170" fill="rgba(26,39,68,0.85)" />
-              <rect x="130" y="20" width="40" height="180" fill="rgba(26,39,68,0.95)" />
-              <rect x="175" y="10" width="20" height="190" fill="rgba(26,39,68,0.9)" />
-              <rect x="200" y="35" width="30" height="165" fill="rgba(26,39,68,0.85)" />
-              <rect x="235" y="50" width="25" height="150" fill="rgba(26,39,68,0.9)" />
-              <rect x="265" y="65" width="20" height="135" fill="rgba(26,39,68,0.8)" />
-              <rect x="290" y="45" width="35" height="155" fill="rgba(26,39,68,0.9)" />
-              <rect x="330" y="75" width="25" height="125" fill="rgba(26,39,68,0.85)" />
-              <rect x="360" y="85" width="30" height="115" fill="rgba(26,39,68,0.8)" />
-              {/* Reflections in water */}
-              <rect x="0" y="200" width="400" height="40" fill="rgba(74,106,165,0.3)" />
+              <rect x="20" y="80" width="30" height="120" fill="rgba(42,10,20,0.85)" />
+              <rect x="55" y="60" width="20" height="140" fill="rgba(42,10,20,0.9)" />
+              <rect x="80" y="40" width="25" height="160" fill="rgba(42,10,20,0.85)" />
+              <rect x="110" y="30" width="15" height="170" fill="rgba(42,10,20,0.8)" />
+              <rect x="130" y="20" width="40" height="180" fill="rgba(42,10,20,0.9)" />
+              <rect x="175" y="10" width="20" height="190" fill="rgba(42,10,20,0.85)" />
+              <rect x="200" y="35" width="30" height="165" fill="rgba(42,10,20,0.8)" />
+              <rect x="235" y="50" width="25" height="150" fill="rgba(42,10,20,0.85)" />
+              <rect x="265" y="65" width="20" height="135" fill="rgba(42,10,20,0.75)" />
+              <rect x="290" y="45" width="35" height="155" fill="rgba(42,10,20,0.85)" />
+              <rect x="330" y="75" width="25" height="125" fill="rgba(42,10,20,0.8)" />
+              <rect x="360" y="85" width="30" height="115" fill="rgba(42,10,20,0.75)" />
+              {/* Gold water reflection */}
+              <rect x="0" y="200" width="400" height="40" fill="rgba(197,168,128,0.15)" />
             </svg>
 
             {/* Overlay panel */}
