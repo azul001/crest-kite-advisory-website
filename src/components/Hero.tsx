@@ -219,7 +219,7 @@ export default function Hero() {
               </p>
               <p
                 className="text-xs leading-relaxed"
-                style={{ color: "var(--color-ivory)" + "cc" }}
+                style={{ color: "var(--color-muted-gold)" }}
               >
                 Committed to compliance excellence and international financial reporting standards.
               </p>
