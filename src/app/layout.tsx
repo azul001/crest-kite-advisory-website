@@ -5,9 +5,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Crest Kite Advisory & Assurance LLC | Tax, Audit & Financial Advisory UAE",
+  title: "Crest Line Finance and Tax Consultants LLC | Tax, Audit & Accounting UAE",
   description:
-    "Premium financial advisory, corporate tax, VAT, audit & assurance, and accounting services for multinational groups, conglomerates and high-growth enterprises in the UAE, GCC and international markets.",
+    "Your trusted partner in tax advisory, corporate tax, VAT, audit & assurance, and accounting services for businesses across the UAE.",
   keywords: [
     "UAE tax advisory",
     "corporate tax UAE",
@@ -16,20 +16,20 @@ export const metadata: Metadata = {
     "transfer pricing UAE",
     "IFRS accounting",
     "financial advisory Dubai",
-    "DIFC accounting firm",
+    "tax consultants Dubai",
   ],
   openGraph: {
-    title: "Crest Kite Advisory & Assurance LLC",
+    title: "Crest Line Finance and Tax Consultants LLC",
     description:
-      "Pioneering audit governance, precision tax structuring, and compliance excellence in the UAE.",
+      "Your trusted partner in tax, audit, accounting and consulting in the UAE.",
     type: "website",
     locale: "en_AE",
-    siteName: "Crest Kite Advisory & Assurance LLC",
+    siteName: "Crest Line Finance and Tax Consultants LLC",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Crest Kite Advisory & Assurance LLC",
-    description: "Premium financial advisory services in the UAE.",
+    title: "Crest Line Finance and Tax Consultants LLC",
+    description: "Your trusted partner in tax, audit, accounting and consulting in the UAE.",
   },
   robots: {
     index: true,

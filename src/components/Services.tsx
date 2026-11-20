@@ -410,7 +410,7 @@ export default function Services() {
                 Let Our Specialists Handle Your UAE Tax Obligations
               </h3>
               <p className="text-sm leading-relaxed" style={{ color: "rgba(250,247,242,0.7)" }}>
-                From corporate tax registration to FTA audit defence — Crest Kite Advisory delivers
+                From corporate tax registration to FTA audit defence — Crest Line delivers
                 precision, speed and strategic value across every engagement.
               </p>
             </motion.div>

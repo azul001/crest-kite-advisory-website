@@ -65,13 +65,13 @@ export default function Navbar() {
                 className="text-sm font-bold tracking-widest font-cinzel leading-none"
                 style={{ color: scrolled ? "var(--color-burgundy)" : "var(--color-muted-gold)" }}
               >
-                CREST KITE
+                CREST LINE
               </div>
               <div
                 className="text-[9px] tracking-wider font-cinzel leading-none mt-0.5"
                 style={{ color: scrolled ? "var(--color-muted-grey)" : "rgba(250,247,242,0.5)" }}
               >
-                ADVISORY & ASSURANCE LLC
+                FINANCE AND TAX CONSULTANTS LLC
               </div>
             </div>
           </button>

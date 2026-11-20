@@ -28,11 +28,11 @@ export default function Footer() {
               <div>
                 <div className="text-sm font-bold tracking-[0.2em] font-cinzel"
                   style={{ color: "var(--color-muted-gold)" }}>
-                  CREST KITE
+                  CREST LINE
                 </div>
                 <div className="text-[9px] tracking-wider font-cinzel"
                   style={{ color: "rgba(250,247,242,0.45)" }}>
-                  ADVISORY &amp; ASSURANCE LLC
+                  FINANCE AND TAX CONSULTANTS LLC
                 </div>
               </div>
             </div>

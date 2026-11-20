@@ -1,11 +1,11 @@
 export const COMPANY = {
-  name: "Crest Kite Advisory & Assurance LLC",
-  shortName: "CREST KITE",
-  tagline: "ADVISORY & ASSURANCE LLC",
-  email: "info@crestkiteadvisory.com",
-  phone: "+971 58 952 8573",
+  name: "Crest Line Finance and Tax Consultants LLC",
+  shortName: "CREST LINE",
+  tagline: "FINANCE AND TAX CONSULTANTS LLC",
+  email: "arun@crestlineft.com",
+  phone: "+971 589528573",
   address: "Business Bay, Dubai, UAE",
-  addressFull: "Business Bay, Dubai, United Arab Emirates",
+  addressFull: "Office No G06-214, The Exchange Tower, Business Bay, Dubai, UAE",
 };
 
 export const METRICS = [

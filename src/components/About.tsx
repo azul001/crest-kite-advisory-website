@@ -66,7 +66,7 @@ export default function About() {
             className="space-y-4"
           >
             <p className="text-base leading-relaxed" style={{ color: "var(--color-muted-grey)" }}>
-              Crest Kite Advisory &amp; Assurance is positioned to support businesses navigating the
+              Crest Line Finance and Tax Consultants is positioned to support businesses navigating the
               complexities of financial governance, corporate taxation, statutory compliance and
               strategic financial management.
             </p>
@@ -174,15 +174,15 @@ export default function About() {
                   <polygon points="60,20 90,60 60,100 30,60" fill="none" stroke="rgba(197,168,128,0.6)" strokeWidth="1.2"/>
                   <polygon points="60,32 78,60 60,88 42,60" fill="rgba(74,21,37,0.4)" stroke="rgba(197,168,128,0.4)" strokeWidth="0.8"/>
                   <text x="60" y="65" textAnchor="middle" fontFamily="serif" fontSize="11"
-                    fill="rgba(197,168,128,0.9)" letterSpacing="2">CKA</text>
+                    fill="rgba(197,168,128,0.9)" letterSpacing="2">CL</text>
                 </svg>
                 <div className="text-center px-6">
                   <p className="font-cinzel text-xs tracking-[0.3em] mb-1"
                     style={{ color: "var(--color-muted-gold)" }}>
-                    CREST KITE ADVISORY
+                    CREST LINE
                   </p>
                   <p className="text-xs" style={{ color: "rgba(250,247,242,0.5)" }}>
-                    Advisory · Assurance · Excellence
+                    Tax · Audit · Accounting
                   </p>
                 </div>
               </div>
